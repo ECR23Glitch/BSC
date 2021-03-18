@@ -25,7 +25,7 @@
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="registerBSC.html">Crea tu reporte</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Mis reportes</a></li>
-                        <li class="nav-item"><a class="nav-link" href="profilelogged.html">Mi perfil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="profilelogged.php">Mi perfil</a></li>
                     </ul>
                     <form class="form-inline mr-auto" target="_self">
                         <div class="form-group"><label for="search-field"></label></div>

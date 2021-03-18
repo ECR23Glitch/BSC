@@ -24,7 +24,7 @@
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="registerBSC.html">Crea tu reporte</a></li>
-                        <li class="nav-item"><a class="nav-link" href="reports.html">Mis reportes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="reports.php">Mis reportes</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Mi perfil</a></li>
                     </ul>
                     <form class="form-inline mr-auto" target="_self">
