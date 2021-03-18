@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!--Página que muestra los reportes-->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -19,6 +19,7 @@
 
 <body>
     <header class="header-dark">
+      <!--Menú-->
         <nav class="navbar navbar-dark navbar-expand-lg navigation-clean-search">
             <div class="container"><a class="navbar-brand" href="#">BSC</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1">
@@ -32,9 +33,10 @@
                     </form><a class="btn btn-light action-button" role="button" href="#">Cerrar sesión</a>
                 </div>
             </div>
-        </nav>
+        </nav> <!--Fin del menú-->
         <div class="container hero">
             <div class="row">
+              <!--Título-->
                 <div class="col-md-8 offset-md-2">
                     <h1 class="text-center">Acá están tus reportes hechos</h1>
                 </div>
@@ -44,6 +46,7 @@
             <div class="row">
                 <div class="col-md-8 offset-md-2 text-center">
                     <div class="text-center">
+                      <!--Tabla que muestra los reportes-->
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
@@ -66,6 +69,7 @@
             </div>
         </div>
     </header>
+    <!--Footer-->
     <footer class="footer-dark">
         <div class="container">
             <div class="row">
@@ -82,7 +86,7 @@
             </div>
             <p class="copyright" style="font-size: 18px;color: rgb(254,255,255);">The pastry Chefs © 2021</p>
         </div>
-    </footer>
+    </footer><!--Fin del footer-->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
