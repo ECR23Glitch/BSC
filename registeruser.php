@@ -50,65 +50,82 @@
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/toastr.min.js"></script>
     <script src="assets/js/jquery.validate.js"></script>
+    <!--Validación de datos-->
     <script type="text/javascript">
       $(document).ready(function(){
         $("#registrous").prop("disabled",true);
         $("#registro").validate({
+          //Campos requeridos
           rules:{
+            //email
             email:{
               required:true,
               email:true
             },
+            //Nombre del usuario
             nombreus:{
               required: true,
-              minlength:3
+              minlength:3 //longitud minima
             },
+            //Apellido paterno
             appus:{
               required: true,
-              minlength:3
+              minlength:3 //longitud minima
             },
+            //Apellido materno
             apmus:{
               required: true,
-              minlength: 3
+              minlength: 3 //longitud minima
             },
+            //Nombre d ela organización
             orgus:{
               required: true,
-              minlength: 3
+              minlength: 3 //longitud minima
             },
+            //Descripción del uduario
             desus:{
               required:true,
-              minlength:20
+              minlength:20 //longitud minima
             },
+            //Contraseña
             password:{
               required:true,
-              minlength:10
+              minlength:10 //longitud minima
             }
           },
+          //Mensajes de error de acuerdo a los atributos
           messages:{
+            //Error en email
             email:{
               required:"Ingresa un correo electronico",
               email:"Formato debe de ser abc@dominio.ext"
             },
+            //Error en Nombre del usuario
             nombreus:{
               required: "Ingresa tu nombre",
               minlength:"Al menos debe de contener 3 letras"
             },
+            //Error en Apellido paterno
             appus:{
               required: "Ingresa tu apellido paterno",
               minlength:"Al menos debe de contener 3 letras"
             },
+            //Error en Apellido materno
             apmus:{
               required: "Ingresa tu apellido materno",
               minlength: "Al menos debe de contener 3 letras"
             },
+            //Error en Organización
             orgus:{
               required: "Ingresa tu Organización",
               minlength: "Al menos debe de tener 3 letras"
             },
+            //Error en Descripción
             desus:{
               required:"Ingresa una descripcion de ti",
               minlength:"Al menos debe de contener 20 letras"
             },
+            //Error en contraseña
             password:{
               required:"Ingresa tu contraseña",
               minlength:"Al menos 10 caracteres debe de contener"
@@ -142,7 +159,10 @@
               if (data['status'] == true) {
               // registro exitoso, redirecciona
               window.location.href = 'login.html';
-              } else {
+              }
+              //El usuario nno se puede registrar  
+              else {
+
                   toastr["warning"]("No se ha podido registrar el usuario");
                   console.debug(data['msg']);
               }
