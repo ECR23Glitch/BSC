@@ -13,23 +13,64 @@
     <link rel="stylesheet" href="assets/css/Header-Dark.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="assets/css/toastr.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/Team-Boxed.css">
 </head>
 
 <body style="background: url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;);">
     <section class="login-dark" style="background: url(&quot;assets/img/mountain_bg.jpg&quot;) center / auto;">
-        <form method="post" style="background: var(--gray-dark);">
+        <form id="logform" method="post" style="background: var(--gray-dark);">
             <h2 class="sr-only">Login Form</h2>
             <div class="illustration"><i class="icon ion-ios-locked-outline" style="color: var(--light);"></i></div>
             <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Correo electrónico" style="color: rgb(255,255,255);"></div>
             <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Contraseña" style="color: rgb(255,255,255);"></div>
-            <div class="form-group"><button class="btn btn-primary btn-block" data-bss-hover-animate="rubberBand" type="submit" style="background: rgb(255,255,255);color: rgb(14,14,14);">Ingresar</button></div>
+            <div class="form-group">
+              <button id="blog" class="btn btn-primary btn-block" data-bss-hover-animate="rubberBand" type="submit" style="background: rgb(255,255,255);color: rgb(14,14,14);">Ingresar</button>
+              <br>
+              <button id="salir" class="btn btn-primary btn-block rubberBand animated" type="submit" style="background: rgb(255,255,255);color: rgb(0,0,0);">Cancelar</button>
+            </div>
         </form>
     </section>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/toastr.min.js"></script>
+    <script src="assets/js/jquery.validate.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#blog').prop("disabled",true);
+        $('#logform').validate({
+          rules:{
+            email:{
+              required:true,
+              email:true
+            },
+            password:{
+              required:true,
+              minlength:8
+            }
+          },
+          messages:{
+            email:{
+              required:"Ingresa tu correo electronico con el que te registraste",
+              email: "Formato debe de ser abc@dominio.ext"
+            },
+            password:{
+              required:"Ingresa tu contraseña",
+              minlength:"Contraseña minimo de 8 caracteres"
+            }
+          }
+        });
+
+        $("#logform").bind('change keyup',function(){
+          if($(this).validate().checkForm())
+            $('#blog').prop("disabled",false);
+          else
+            $('#blog').prop("disabled",true);
+        });
+      });
+    </script>
 </body>
 
 </html>
