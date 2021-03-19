@@ -25,5 +25,24 @@
 
       return $stmt->fetch();
     }
+
+    public function damelasareas(){
+      $tabla = 'area';
+      $query = "SELECT * FROM $tabla";
+      $stmt = $this->pdo->prepare($query);
+      $stmt->execute();
+
+      return $stmt->fetchAll();
+    }
+
+    public function damelosindicadoresconareas($ideare){
+      $tabla = 'indicador';
+      $tablaunion = 'area';
+      $query = "SELECT * FROM $tabla INNER JOIN $tablaunion where $tabla.id=?";
+      $stmt = $this->pdo->prepare($query);
+      $stmt -> execute([$ideare]);
+
+      return $stmt->fetchAll();
+    }
   }
  ?>
