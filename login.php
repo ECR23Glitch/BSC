@@ -26,6 +26,7 @@
 
 <body style="background: url(&quot;https://cdn.bootstrapstudio.io/placeholders/1400x800.png&quot;);">
     <section class="login-dark" style="background: url(&quot;assets/img/mountain_bg.jpg&quot;) center / auto;">
+      <!--Formulario de inicio de sesión-->
         <form id="logform" method="post" style="background: var(--gray-dark);">
             <h2 class="sr-only">Login Form</h2>
             <div class="illustration"><i class="icon ion-ios-locked-outline" style="color: var(--light);"></i></div>
@@ -38,32 +39,40 @@
               <br>
               <a class="btn btn-primary text-dark bg-white border rounded" role="button" data-bss-hover-animate="rubberBand" style="width: 250px;" href="index.html">Cancelar</a>
             </div>
-        </form>
+        </form><!--Fin del formulario-->
     </section>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/toastr.min.js"></script>
     <script src="assets/js/jquery.validate.js"></script>
+    <!--Validación de datos-->
     <script type="text/javascript">
       $(document).ready(function(){
         $('#blog').prop("disabled",true);
         $('#logform').validate({
           rules:{
+            /*Validación de email*/
             email:{
               required:true,
               email:true
             },
+            /*Validación de contraseña*/
             password:{
               required:true,
               minlength:8
             }
           },
+          /*Mensajes de error*/
           messages:{
+            /*Envia mensaje de error en caso de que no se haya ingresado el email
+            o si se ha ingresado en un formato diferente*/
             email:{
               required:"Ingresa tu correo electronico con el que te registraste",
               email: "Formato debe de ser abc@dominio.ext"
             },
+              /*Envia mensaje de error en caso de que no se haya ingresado
+              la contraseña o el numero de caracteres sea incorrecto*/
             password:{
               required:"Ingresa tu contraseña",
               minlength:"Contraseña minimo de 10 caracteres"
