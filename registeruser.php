@@ -24,23 +24,23 @@
             <h2 class="sr-only">Login Form</h2>
             <div class="illustration"><i class="icon ion-ios-people" style="color: rgb(252,252,252);"></i></div>
             <!--Email-->
-            <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Correo electronico"></div>
+            <div class="form-group"><input class="form-control" type="email" name="email" id="email" placeholder="Correo electronico" maxlength="30"></div>
             <!--Nombre-->
-            <div class="form-group"><input class="form-control" type="text" name="nombreus" placeholder="Nombre"></div>
+            <div class="form-group"><input class="form-control" type="text" name="nombreus" id="nombreus" placeholder="Nombre" maxlength="30"></div>
             <!--Apellido paterno-->
-            <div class="form-group"><input class="form-control" type="text" name="appus" placeholder="Apellido Paterno"></div>
+            <div class="form-group"><input class="form-control" type="text" name="appus" id="appus" placeholder="Apellido Paterno" maxlength="30"></div>
             <!--Apellido materno-->
-            <div class="form-group"><input class="form-control" type="text" name="apmus" placeholder="Apellido Materno"></div>
+            <div class="form-group"><input class="form-control" type="text" name="apmus" id="apmus" placeholder="Apellido Materno" maxlength="30"></div>
             <!--Nombre de la organización-->
-            <div class="form-group"><input class="form-control" type="text" name="orgus" placeholder="Organización"></div>
+            <div class="form-group"><input class="form-control" type="text" name="orgus" id="orgus" placeholder="Organización" maxlength="30"></div>
             <!--Descripción de la persona-->
-            <div class="form-group"><textarea class="form-control" name="desus" placeholder="Descripcion sobre ti"></textarea></div>
+            <div class="form-group"><textarea class="form-control" name="desus" id="desus" placeholder="Descripcion sobre ti" maxlength="100"></textarea></div>
             <!--Contraseña-->
-            <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Contraseña"></div>
+            <div class="form-group"><input class="form-control" type="password" name="password" id="password" placeholder="Contraseña" maxlength="10"></div>
             <div class="form-group">
               <button id="registrous" class="btn btn-primary btn-block rubberBand animated" type="submit" style="background: rgb(255,255,255);color: rgb(0,0,0);">Registrate</button>
               <br>
-              <button id="salir" class="btn btn-primary btn-block rubberBand animated" type="submit" style="background: rgb(255,255,255);color: rgb(0,0,0);">Cancelar</button>
+              <a class="btn btn-primary text-dark bg-white border rounded" role="button" data-bss-hover-animate="rubberBand" style="width: 250px;" href="index.html">Cancelar</a>
             </div>
             <a class="forgot" href="login.html">Ya tienes una cuenta, inicia sesión</a>
         </form>
@@ -53,9 +53,6 @@
     <script type="text/javascript">
       $(document).ready(function(){
         $("#registrous").prop("disabled",true);
-        $("salir").click(function(){
-
-        });
         $("#registro").validate({
           rules:{
             email:{
@@ -84,7 +81,7 @@
             },
             password:{
               required:true,
-              minlength:8
+              minlength:10
             }
           },
           messages:{
@@ -114,7 +111,7 @@
             },
             password:{
               required:"Ingresa tu contraseña",
-              minlength:"Al menos 8 caracteres debe de contener"
+              minlength:"Al menos 10 caracteres debe de contener"
             }
           }
         });
@@ -130,12 +127,12 @@
     </script>
     <script type="text/javascript">
       $(document).ready(function(){
-        $('registro').submit(function(event){
+        $('#registro').submit(function(event){
           event.preventDefault();
           let inputs = new FormData(this);
           $.ajax({
             type: "POST",
-            url: "assets/php/registro-user.php",
+            url: "assets/php/registrous.php",
             data: inputs,
             cache: false,
             contentType: false,
