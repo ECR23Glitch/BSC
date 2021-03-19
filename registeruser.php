@@ -159,16 +159,14 @@
             success: function(data) {
               if (data['status'] == true) {
               // registro exitoso, redirecciona
-<<<<<<< HEAD
               window.location.href = 'login.php';
               } else {
-=======
+
               window.location.href = 'login.html';
               }
               //El usuario nno se puede registrar
               else {
 
->>>>>>> c5ff93174d7a5499f48ab6b8d7535a0f736359ab
                   toastr["warning"]("No se ha podido registrar el usuario");
                   console.debug(data['msg']);
               }
