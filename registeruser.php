@@ -20,6 +20,7 @@
 
 <body>
     <section class="login-dark" style="background: url(&quot;assets/img/mountain_bg.jpg&quot;) center;">
+        <!--Formulario de registro-->
         <form id="registro" method="post" style="color: var(--light);background: var(--gray-dark);">
             <h2 class="sr-only">Login Form</h2>
             <div class="illustration"><i class="icon ion-ios-people" style="color: rgb(252,252,252);"></i></div>
@@ -43,7 +44,7 @@
               <a class="btn btn-primary text-dark bg-white border rounded" role="button" data-bss-hover-animate="rubberBand" style="width: 250px;" href="index.html">Cancelar</a>
             </div>
             <a class="forgot" href="login.html">Ya tienes una cuenta, inicia sesión</a>
-        </form>
+        </form><!--Fin del formulario-->
     </section>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
@@ -160,7 +161,7 @@
               // registro exitoso, redirecciona
               window.location.href = 'login.html';
               }
-              //El usuario nno se puede registrar  
+              //El usuario nno se puede registrar
               else {
 
                   toastr["warning"]("No se ha podido registrar el usuario");
