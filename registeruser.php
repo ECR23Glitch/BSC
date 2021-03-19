@@ -141,7 +141,7 @@
             success: function(data) {
               if (data['status'] == true) {
               // registro exitoso, redirecciona
-              window.location.href = 'login.html';
+              window.location.href = 'login.php';
               } else {
                   toastr["warning"]("No se ha podido registrar el usuario");
                   console.debug(data['msg']);

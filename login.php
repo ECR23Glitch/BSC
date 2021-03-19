@@ -1,5 +1,9 @@
-<!DOCTYPE html>
-<!--Inicio de sesión-->
+<?php
+  session_start();
+  if(isset($_SESSION['usuario']))
+    Header("Location: profilelogged.php");
+?>
+
 <html lang="en">
 
 <head>
@@ -26,9 +30,9 @@
             <h2 class="sr-only">Login Form</h2>
             <div class="illustration"><i class="icon ion-ios-locked-outline" style="color: var(--light);"></i></div>
             <!--Email-->
-            <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Correo electrónico" style="color: rgb(255,255,255);"></div>
+            <div class="form-group"><input maxlength="30" class="form-control" type="email" name="email" id="email" placeholder="Correo electrónico" style="color: rgb(255,255,255);"></div>
             <!--Contraseña-->
-            <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Contraseña" style="color: rgb(255,255,255);"></div>
+            <div class="form-group"><input maxlength="10" class="form-control" type="password" name="password" id="password" placeholder="Contraseña" style="color: rgb(255,255,255);"></div>
             <div class="form-group">
               <button id="blog" class="btn btn-primary btn-block" data-bss-hover-animate="rubberBand" type="submit" style="background: rgb(255,255,255);color: rgb(14,14,14);">Ingresar</button>
               <br>
@@ -62,7 +66,7 @@
             },
             password:{
               required:"Ingresa tu contraseña",
-              minlength:"Contraseña minimo de 8 caracteres"
+              minlength:"Contraseña minimo de 10 caracteres"
             }
           }
         });
@@ -74,6 +78,64 @@
             $('#blog').prop("disabled",true);
         });
       });
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+      var toastOptions = {
+        closeButton: false,
+        debug: false,
+        newestOnTop: false,
+        progressBar: false,
+        positionClass: "toast-top-right",
+        preventDuplicates: false,
+        onclick: null,
+        showDuration: "300",
+        hideDuration: "1000",
+        timeOut: "5000",
+        extendedTimeOut: "1000",
+        showEasing: "swing",
+        hideEasing: "linear",
+        showMethod: "fadeIn",
+        hideMethod: "fadeOut"
+      };
+
+      $('#logform').submit(function(event) {
+        event.preventDefault();
+        $.ajax({
+          type: "POST",
+          url: "assets/php/login.php",
+          data: $(this).serialize(),
+          dataType: "JSON",
+          success: function(respuesta) {
+            if (respuesta['datos_correctos'] == false) {
+              toastr["warning"]("Usuario o contraseña incorrectos", "No se pudo iniciar sesión");
+            } else {
+              window.location.href = 'profilelogged.php';
+            }
+          },
+          error: function(jqXHR, exception, errorThrown) {
+            var msg = '';
+            if (jqXHR.status === 0) {
+              msg = 'Not connect.\n Verify Network.';
+            } else if (jqXHR.status == 404) {
+              msg = 'Requested page not found. [404]';
+            } else if (jqXHR.status == 500) {
+              msg = 'Internal Server Error [500].';
+            } else if (exception === 'parsererror') {
+              msg = 'Requested JSON parse failed.';
+            } else if (exception === 'timeout') {
+              msg = 'Time out error.';
+            } else if (exception === 'abort') {
+              msg = 'Ajax request aborted.';
+            } else {
+              msg = 'Uncaught Error.\n' + jqXHR.responseText;
+            }
+            toastr["error"]('Ha ocurrido un error');
+          }
+        });
+        toastr.options = toastOptions;
+      });
+    });
     </script>
 </body>
 
