@@ -161,12 +161,6 @@
               // registro exitoso, redirecciona
               window.location.href = 'login.php';
               } else {
-
-              window.location.href = 'login.html';
-              }
-              //El usuario nno se puede registrar
-              else {
-
                   toastr["warning"]("No se ha podido registrar el usuario");
                   console.debug(data['msg']);
               }
