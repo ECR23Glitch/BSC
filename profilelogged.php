@@ -1,4 +1,18 @@
-<!DOCTYPE html>
+<?php
+session_start();
+if(!isset($_SESSION['usuario']))
+  Header("Location: login.php");
+
+
+  require('assets/php/consultas.php');
+
+  $consultas = new consultas();
+  $idUsuario = $_SESSION['usuario']['id'];
+  //Datos usuario vistas
+  $userVista = $consultas->datosUsuario($idUsuario);
+
+ ?>
+
 <html lang="en">
 <!--Perfil-->
 <head>
@@ -31,7 +45,7 @@
                     </ul>
                     <form class="form-inline mr-auto" target="_self">
                         <div class="form-group"><label for="search-field"></label></div>
-                    </form><a class="btn btn-light action-button" role="button" href="#">Cerrar sesión</a>
+                    </form><a id="cerrarSesion" class="btn btn-light action-button" role="button" href="#">Cerrar sesión</a>
                 </div>
             </div>
         </nav>
@@ -53,9 +67,10 @@
                                   <!--Datos personales del usuario-->
                                     <div class="col-md-6 col-lg-6 item">
                                         <div data-bss-hover-animate="wobble" class="box" style="background: var(--gray);">
-                                            <h3 class="name" style="color: var(--white);">Tu nombre</h3>
-                                            <p class="title" style="color: rgb(0,0,0);">TU ORGANIZACIÓN</p>
-                                            <p class="description" style="color: var(--white);">Tu descripcion</p>
+                                            <h3 class="name" style="color: var(--white);"><?php echo $userVista['nomcli'];?> <?php echo $userVista['appaterno']; ?> <?php echo $userVista['apmaterno']; ?></h3>
+                                            <p class="title" style="color: rgb(0,0,0);"><?php echo $userVista['org']; ?></p>
+                                            <p class="description" style="color: var(--white);"><?php echo $userVista['descripcion']; ?></p>
+                                            <p class="description" style="color: var(--white);">Te uniste: <br><?php echo $userVista['created_at']; ?></p>
                                         </div>
                                     </div>
                                     <!--Datos de reportes-->
@@ -94,6 +109,14 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $("#cerrarSesion").click(function() {
+        event.preventDefault();
+        $(location).attr('href', 'assets/php/logout.php');
+      });
+    });
+    </script>
 </body>
 
 </html>
