@@ -4,12 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-<<<<<<< HEAD
     <title>BSC</title>
-=======
-    <title>bsc</title>
-    <!--Librerias-->
->>>>>>> 97fd3e93ed2923944c6627e41872ef9b59b3f6e8
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
@@ -25,12 +20,7 @@
 
 <body>
     <section class="login-dark" style="background: url(&quot;assets/img/mountain_bg.jpg&quot;) center;">
-<<<<<<< HEAD
         <form id="registro" method="post" style="color: var(--light);background: var(--gray-dark);">
-=======
-        <!--Formulario de registro de usuario-->
-        <form method="post" style="color: var(--light);background: var(--gray-dark);">
->>>>>>> 97fd3e93ed2923944c6627e41872ef9b59b3f6e8
             <h2 class="sr-only">Login Form</h2>
             <div class="illustration"><i class="icon ion-ios-people" style="color: rgb(252,252,252);"></i></div>
             <!--Email-->
