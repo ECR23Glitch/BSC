@@ -37,17 +37,12 @@
             <div class="form-group"><textarea class="form-control" name="desus" placeholder="Descripcion sobre ti"></textarea></div>
             <!--Contraseña-->
             <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Contraseña"></div>
-<<<<<<< HEAD
             <div class="form-group">
               <button id="registrous" class="btn btn-primary btn-block rubberBand animated" type="submit" style="background: rgb(255,255,255);color: rgb(0,0,0);">Registrate</button>
               <br>
               <button id="salir" class="btn btn-primary btn-block rubberBand animated" type="submit" style="background: rgb(255,255,255);color: rgb(0,0,0);">Cancelar</button>
             </div>
             <a class="forgot" href="login.html">Ya tienes una cuenta, inicia sesión</a>
-=======
-            <!--Botón de registrar-->
-            <div class="form-group"><button class="btn btn-primary btn-block rubberBand animated" type="submit" style="background: rgb(255,255,255);color: rgb(0,0,0);">Registrate</button></div><a class="forgot" href="#">Ya tienes una cuenta, inicia sesión</a>
->>>>>>> 97fd3e93ed2923944c6627e41872ef9b59b3f6e8
         </form>
     </section>
     <script src="assets/js/jquery.min.js"></script>
