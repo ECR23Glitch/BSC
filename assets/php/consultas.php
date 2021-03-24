@@ -26,9 +26,9 @@
       return $stmt->fetch();
     }
 
-    public function damelasareas(){
-      $tabla = 'area';
-      $query = "SELECT * FROM $tabla";
+    public function dameelarea($id){
+      $tabla = 'indicador';
+      $query = "SELECT DISTINCT arid FROM $tabla WHERE arid=$id";
       $stmt = $this->pdo->prepare($query);
       $stmt->execute();
 
@@ -38,7 +38,7 @@
     public function damelosindicadoresconareas($ideare){
       $tabla = 'indicador';
       $tablaunion = 'area';
-      $query = "SELECT * FROM $tabla INNER JOIN $tablaunion where $tabla.id=?";
+      $query = "SELECT * FROM $tabla where arid=?";
       $stmt = $this->pdo->prepare($query);
       $stmt -> execute([$ideare]);
 
