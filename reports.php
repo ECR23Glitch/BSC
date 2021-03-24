@@ -1,3 +1,16 @@
+<?php
+session_start();
+if(!isset($_SESSION['usuario']))
+  Header("Location: login.php");
+
+
+  require('assets/php/consultas.php');
+
+  $consultas = new consultas();
+  $idUsuario = $_SESSION['usuario']['id'];
+  //Datos usuario vistas
+  $datas = $consultas->damelosreportes($idUsuario);
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <!--Página que muestra los reportes-->
@@ -21,7 +34,7 @@
     <header class="header-dark">
       <!--Menú-->
         <nav class="navbar navbar-dark navbar-expand-lg navigation-clean-search">
-            <div class="container"><a class="navbar-brand" href="#">BSC</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="container"><a class="navbar-brand" href="index.html">BSC</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="registerBSC.php">Crea tu reporte</a></li>
@@ -30,7 +43,7 @@
                     </ul>
                     <form class="form-inline mr-auto" target="_self">
                         <div class="form-group"><label for="search-field"></label></div>
-                    </form><a class="btn btn-light action-button" role="button" href="#">Cerrar sesión</a>
+                    </form><a id="logout" class="btn btn-light action-button" role="button" href="#">Cerrar sesión</a>
                 </div>
             </div>
         </nav> <!--Fin del menú-->
@@ -51,16 +64,31 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th class="text-light bg-dark">Column 1</th>
-                                        <th class="text-light bg-dark">Column 2</th>
+                                        <th class="text-light bg-dark">Objetivo</th>
+                                        <th class="text-light bg-dark">Frecuencia Medida</th>
+                                        <th class="text-light bg-dark">Meta</th>
+                                        <th class="text-light bg-dark">Resultado actual</th>
+                                        <th class="text-light bg-dark">Resultado</th>
+                                        <th class="text-light bg-dark">Nombre area</th>
+                                        <th class="text-light bg-dark">Nombre indicador</th>
+                                        <th class="text-light bg-dark">Fecha de elaboracion</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td class="bg-white">Cell 1</td>
-                                        <td class="bg-white">Cell 2</td>
+                                  <div class="" style="width:500px; height:100px; overflow:auto;">
+                                    <?php foreach ($datas as $data) {?>
+                                    <tr class="text-center" style="background: var(--white);">
+                                        <td><?php echo $data['obj'];?></td>
+                                        <td><?php echo $data['frec_med'];?></td>
+                                        <td><?php echo $data['meta'];?></td>
+                                        <td><?php echo $data['resu_actu'];?></td>
+                                        <td><?php echo $data['resultado'];?></td>
+                                        <td><?php echo $data['Nomare'];?></td>
+                                        <td><?php echo $data['Nomind'];?></td>
+                                        <td><?php echo $data['created_at'];?></td>
                                     </tr>
-                                    <tr></tr>
+                                    <?php } ?>
+                                  </div>
                                 </tbody>
                             </table>
                         </div>
@@ -90,6 +118,14 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $("#logout").click(function() {
+        event.preventDefault();
+        $(location).attr('href', 'assets/php/logout.php');
+      });
+    });
+    </script>
 </body>
 
 </html>
