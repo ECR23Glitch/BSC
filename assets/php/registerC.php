@@ -10,7 +10,7 @@
 
     try{
       if(isset($_POST['obj'])){
-        $user_table = 'procesos';
+        $user_table = 'clientes';
         $obj = $_POST['obj'];
         $fm = $_POST['fm'];
         $indi = $_POST['ind'];
@@ -20,7 +20,7 @@
         $iduser = $_POST['user'];
         $sta = "Nada";
         $recom = "Nada";
-
+        
         if( (($resa*100)/$met) < 65){
           $resul = "RIESGO";
         }elseif ((($resa*100)/$met) < 100) {

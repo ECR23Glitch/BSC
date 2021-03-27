@@ -10,7 +10,6 @@ if(!isset($_SESSION['usuario']))
   $idUsuario = $_SESSION['usuario']['id'];
   //Datos usuario vistas
   $userVista = $consultas->datosUsuario($idUsuario);
-  $datas = $consultas->damelosreportes($idUsuario);
  ?>
 
 <html lang="en">
@@ -79,13 +78,8 @@ if(!isset($_SESSION['usuario']))
                                             <h3 class="name" style="color: var(--white);">Tus reportes</h3>
                                             <p class="title" style="color: rgb(0,0,0);">Muestra tus reportes mas recientes</p>
                                             <p class="description" style="color: rgb(255,255,255);">Reportes hechos: </p>
-                                            <?php
-                                            $cont = 0;
-                                            foreach ($datas as $d): ?>
-                                              <p class="description" style="color: rgb(255,255,255);"><?php echo $cont; ?></p>
-                                            <?php
-                                            $cont = $cont + 1;
-                                          endforeach; ?>
+  
+                                              <p class="description" style="color: rgb(255,255,255);"></p>
                                         </div>
                                     </div>
                                 </div>

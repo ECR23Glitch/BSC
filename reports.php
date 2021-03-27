@@ -8,8 +8,7 @@ if(!isset($_SESSION['usuario']))
 
   $consultas = new consultas();
   $idUsuario = $_SESSION['usuario']['id'];
-  //Datos usuario vistas
-  $datas = $consultas->damelosreportes($idUsuario);
+  //Datos usuario 
  ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -10,7 +10,7 @@
 
     try{
       if(isset($_POST['obj'])){
-        $user_table = 'procesos';
+        $user_table = 'crecimiento';
         $obj = $_POST['obj'];
         $fm = $_POST['fm'];
         $indi = $_POST['ind'];
