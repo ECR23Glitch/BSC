@@ -37,5 +37,13 @@
       return $stmt->fetchAll();
     }
 
+    public function damelosreportes($are, $usuario){
+      $query = "SELECT * FROM $are INNER JOIN indicador where cliid=$usuario AND id_ind=indicador.id";
+      $stmt = $this->pdo->prepare($query);
+      $stmt -> execute();
+
+      return $stmt->fetchAll();
+    }
+
   }
  ?>

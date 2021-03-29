@@ -36,7 +36,7 @@ if(!isset($_SESSION['usuario']))
                 <input class="form-control" type="text" name="obj" placeholder="Objetivo" maxlength="45">
               </div>
               <div class="form-group">
-                <select class="form-control">
+                <select class="form-control" id="fm" name="fm">
                   <optgroup class="form-group" style="color:black;" label="Frecuencia de medida">
                     <option value="Anual" style="color:black;">Anual</option>
                     <option value="Mensual" style="color:black;">Mensual</option>
@@ -44,7 +44,7 @@ if(!isset($_SESSION['usuario']))
                 </select>
               </div>
               <div class="form-group">
-                <select class="form-control">
+                <select class="form-control" name="ind" id="ind">
                   <optgroup class="form-group" style="color:black;" label="Selecciona tu indicador">
                     <?php $pfin = $consultas->damelosindicadoresconareas('clientes');
                         foreach ($pfin as $f) {
@@ -54,7 +54,7 @@ if(!isset($_SESSION['usuario']))
                   </optgroup>
                 </select>
               </div>
-              <div class="form-group"><input class="form-control" type="number" name="meta" placeholder="Meta" maxlength="6"></div>
+              <div class="form-group"><input class="form-control" type="number" name="met" placeholder="Meta" maxlength="6"></div>
               <div class="form-group"><input class="form-control" type="number" name="resu" placeholder="Resultado actual" maxlength="6"></div>
               <div class="form-group">
                 <button class="btn btn-primary btn-block" data-bss-hover-animate="rubberBand" type="submit" style="color: rgb(0,0,0);background: rgb(255,255,255);width: 250;" id="bnext2">Siguiente</button>
@@ -118,16 +118,15 @@ if(!isset($_SESSION['usuario']))
     <script type="text/javascript">
       $(document).ready(function(){
         var areaid = 'clientes';
-        var user = <?php echo $idUsuario; ?>;
-        $("#bnext2").click(function(e){
-          e.preventDefault();
-          $("#cliente").submit(function(){
+        var useru = <?php echo $idUsuario; ?>;
+          $("#cliente").submit(function(e){
+            e.preventDefault();
             let inputs = new FormData(this);
             $.ajax({
               type: "POST",
               url: "assets/php/registerC.php",
               data:{
-                inputs, 'arid':areaid,'user':user
+                inputs, arid:areaid,user:useru
               },
               cache: false,
               contentType: false,
@@ -165,7 +164,6 @@ if(!isset($_SESSION['usuario']))
           }
           });
         });
-      });
     </script>
 </body>
 

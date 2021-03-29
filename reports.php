@@ -8,7 +8,7 @@ if(!isset($_SESSION['usuario']))
 
   $consultas = new consultas();
   $idUsuario = $_SESSION['usuario']['id'];
-  //Datos usuario 
+  //Datos usuario
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,6 +51,16 @@ if(!isset($_SESSION['usuario']))
               <!--Título-->
                 <div class="col-md-8 offset-md-2">
                     <h1 class="text-center">Acá están tus reportes hechos</h1>
+                    <h1 class="text-center">Escoge una area para poder ver tus resultados</h1>
+                    <div class="row people" style="background: var(--gray-dark);">
+                      <!--Datos personales del usuario-->
+                        <div class="col-md-12 col-lg-12 item">
+                    <a class="btn btn-light action-button" role="button" href="vistarep.php?are=clientes" style="width: :250px">CLIENTES</a>
+                    <a class="btn btn-light action-button" role="button" href="vistarep.php?are=finanzas" style="width: :250px">FINANZAS</a>
+                    <a class="btn btn-light action-button" role="button" href="vistarep.php?are=crecimiento" style="width: :250px">CRECIMIENTO</a>
+                    <a class="btn btn-light action-button" role="button" href="vistarep.php?are=procesos" style="width: :250px">PROCESOS</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -58,39 +68,6 @@ if(!isset($_SESSION['usuario']))
             <div class="row">
                 <div class="col-md-8 offset-md-2 text-center">
                     <div class="text-center">
-                      <!--Tabla que muestra los reportes-->
-                        <div class="table-responsive">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th class="text-light bg-dark">Objetivo</th>
-                                        <th class="text-light bg-dark">Frecuencia Medida</th>
-                                        <th class="text-light bg-dark">Meta</th>
-                                        <th class="text-light bg-dark">Resultado actual</th>
-                                        <th class="text-light bg-dark">Resultado</th>
-                                        <th class="text-light bg-dark">Nombre area</th>
-                                        <th class="text-light bg-dark">Nombre indicador</th>
-                                        <th class="text-light bg-dark">Fecha de elaboracion</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                  <div class="" style="width:500px; height:100px; overflow:auto;">
-                                    <?php foreach ($datas as $data) {?>
-                                    <tr class="text-center" style="background: var(--white);">
-                                        <td><?php echo $data['obj'];?></td>
-                                        <td><?php echo $data['frec_med'];?></td>
-                                        <td><?php echo $data['meta'];?></td>
-                                        <td><?php echo $data['resu_actu'];?></td>
-                                        <td><?php echo $data['resultado'];?></td>
-                                        <td><?php echo $data['Nomare'];?></td>
-                                        <td><?php echo $data['Nomind'];?></td>
-                                        <td><?php echo $data['created_at'];?></td>
-                                    </tr>
-                                    <?php } ?>
-                                  </div>
-                                </tbody>
-                            </table>
-                        </div>
                     </div>
                 </div>
             </div>
