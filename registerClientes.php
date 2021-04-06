@@ -22,6 +22,7 @@ if(!isset($_SESSION['usuario']))
     <link rel="stylesheet" href="assets/css/Header-Dark.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="assets/css/toastr.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/Team-Boxed.css">
 </head>
@@ -29,7 +30,7 @@ if(!isset($_SESSION['usuario']))
 <body style="background: url(&quot;assets/img/mountain_bg.jpg&quot;);">
 
     <section class="login-dark" style="background: url(&quot;assets/img/mountain_bg.jpg&quot;) center;">
-            <form id="cliente" method="post" style="background: var(--gray-dark);">
+            <form id="cliente" method="post" action="#" style="background: var(--gray-dark);" >
               <h2 class="text-center">Clientes</h2>
               <div class="illustration"><i class="icon ion-ios-paper-outline" style="border-color: rgb(255,255,255);color: rgb(255,255,255);"></i></div>
               <div class="form-group">
@@ -57,7 +58,7 @@ if(!isset($_SESSION['usuario']))
               <div class="form-group"><input class="form-control" type="number" name="met" placeholder="Meta" maxlength="6"></div>
               <div class="form-group"><input class="form-control" type="number" name="resu" placeholder="Resultado actual" maxlength="6"></div>
               <div class="form-group">
-                <button class="btn btn-primary btn-block" data-bss-hover-animate="rubberBand" type="submit" style="color: rgb(0,0,0);background: rgb(255,255,255);width: 250;" id="bnext2">Siguiente</button>
+                <button class="btn btn-primary btn-block" data-bss-hover-animate="rubberBand" type="submit" style="color: rgb(0,0,0);background: rgb(255,255,255);width: 250;" id="bnext2">Registrar</button>
                 <a class="btn btn-primary text-dark bg-white border rounded" role="button" data-bss-hover-animate="rubberBand" style="width: 250px;" href="registerBSC.php">Cancelar</a>
               </div>
             </form>
@@ -117,24 +118,21 @@ if(!isset($_SESSION['usuario']))
 
     <script type="text/javascript">
       $(document).ready(function(){
-        var areaid = 'clientes';
-        var useru = <?php echo $idUsuario; ?>;
           $("#cliente").submit(function(e){
             e.preventDefault();
             let inputs = new FormData(this);
             $.ajax({
               type: "POST",
               url: "assets/php/registerC.php",
-              data:{
-                inputs, arid:areaid,user:useru
-              },
+              data: inputs,
               cache: false,
               contentType: false,
               processData: false,
               dataType: 'JSON',
               success: function(data) {
-                if (data['status'] == true) {
+                if (data == true) {
                   toastr["success"]("Se ha creado tu reporte de Clientes");
+                  $(location).attr('href','registerBSC.php');
                   console.debug(data['msg']);
                 } else {
                     toastr["warning"]("No se ha podido registrar");
@@ -145,23 +143,23 @@ if(!isset($_SESSION['usuario']))
                     console.debug("Error: " + errorThrown);
               }
             });
-            toastr.options = {
-            "closeButton": false,
-            "debug": false,
-            "newestOnTop": false,
-            "progressBar": true,
-            "positionClass": "toast-top-right",
-            "preventDuplicates": false,
-            "onclick": null,
-            "showDuration": "300",
-            "hideDuration": "1000",
-            "timeOut": "2000",
-            "extendedTimeOut": "1000",
-            "showEasing": "swing",
-            "hideEasing": "linear",
-            "showMethod": "fadeIn",
-            "hideMethod": "fadeOut"
-          }
+              toastr.options = {
+              "closeButton": false,
+              "debug": false,
+              "newestOnTop": false,
+              "progressBar": true,
+              "positionClass": "toast-top-right",
+              "preventDuplicates": false,
+              "onclick": null,
+              "showDuration": "300",
+              "hideDuration": "1000",
+              "timeOut": "2000",
+              "extendedTimeOut": "1000",
+              "showEasing": "swing",
+              "hideEasing": "linear",
+              "showMethod": "fadeIn",
+              "hideMethod": "fadeOut"
+            }
           });
         });
     </script>

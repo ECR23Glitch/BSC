@@ -10,6 +10,11 @@ if(!isset($_SESSION['usuario']))
   $idUsuario = $_SESSION['usuario']['id'];
   //Datos usuario vistas
   $userVista = $consultas->datosUsuario($idUsuario);
+  $repC = $consultas->cuantosReportesC($idUsuario);
+  $repCr = $consultas->cuantosReportesCr($idUsuario);
+  $repF = $consultas->cuantosReportesF($idUsuario);
+  $repP = $consultas->cuantosReportesP($idUsuario);
+ 
  ?>
 
 <html lang="en">
@@ -77,9 +82,27 @@ if(!isset($_SESSION['usuario']))
                                         <div data-bss-hover-animate="wobble" class="box" style="text-align: center;background: var(--gray);">
                                             <h3 class="name" style="color: var(--white);">Tus reportes</h3>
                                             <p class="title" style="color: rgb(0,0,0);">Muestra tus reportes mas recientes</p>
-                                            <p class="description" style="color: rgb(255,255,255);">Reportes hechos: </p>
-  
-                                              <p class="description" style="color: rgb(255,255,255);"></p>
+                                            <p class="description" style="color: rgb(255,255,255);">Reportes hechos</p>
+                                            <?php
+                                                foreach ($repC as $rc) {
+                                            ?>
+                                            <p class="description" style="color: rgb(255,255,255);"> Clientes: <?php echo $rc['RepC'] ?></p>
+                                            <?php  } ?>
+                                            <?php
+                                                foreach ($repCr as $rcr) {
+                                            ?>
+                                            <p class="description" style="color: rgb(255,255,255);"> Crecimiento: <?php echo $rcr['RepCr'] ?></p>
+                                            <?php  } ?>
+                                            <?php
+                                                foreach ($repF as $rf) {
+                                            ?>
+                                            <p class="description" style="color: rgb(255,255,255);"> Finanzas: <?php echo $rf['RepF'] ?></p>
+                                            <?php  } ?>
+                                            <?php
+                                                foreach ($repP as $rp) {
+                                            ?>
+                                            <p class="description" style="color: rgb(255,255,255);"> Procesos: <?php echo $rp['RepP'] ?></p>
+                                            <?php  } ?>
                                         </div>
                                     </div>
                                 </div>

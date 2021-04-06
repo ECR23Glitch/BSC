@@ -45,5 +45,36 @@
       return $stmt->fetchAll();
     }
 
+    public function cuantosReportesC($usuario){
+      $query = "SELECT count(*) RepC FROM clientes where cliid=$usuario";
+      $stmt = $this->pdo->prepare($query);
+      $stmt -> execute();
+
+      return $stmt->fetchAll();
+    }
+
+    public function cuantosReportesCr($usuario){
+      $query = "SELECT count(*) RepCr FROM crecimiento where cliid=$usuario";
+      $stmt = $this->pdo->prepare($query);
+      $stmt -> execute();
+
+      return $stmt->fetchAll();
+    }
+
+    public function cuantosReportesF($usuario){
+      $query = "SELECT count(*) RepF FROM finanzas where cliid=$usuario";
+      $stmt = $this->pdo->prepare($query);
+      $stmt -> execute();
+
+      return $stmt->fetchAll();
+    }
+
+    public function cuantosReportesP($usuario){
+      $query = "SELECT count(*) RepP FROM procesos where cliid=$usuario";
+      $stmt = $this->pdo->prepare($query);
+      $stmt -> execute();
+
+      return $stmt->fetchAll();
+    }
   }
  ?>
