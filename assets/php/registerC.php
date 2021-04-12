@@ -14,8 +14,8 @@
         $resa = $_POST['resu'];
 
         //Estas metricas se evaluan
-        $sta = "Nada";
-        $recom = "Nada";
+        //$sta = "Nada";
+        //$recom = "Nada";
         $porce = ($resa * 100)/$met;
 //Clientes
 if($porce < 60)
