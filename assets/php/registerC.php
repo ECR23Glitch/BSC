@@ -4,6 +4,7 @@
   include('conexion.php');
   $db = new BD();
   $pdo = $db->connect();
+  $porce = 0;
   // objeto de respuesta a clientel
 
         $user_table = 'clientes';
@@ -14,19 +15,19 @@
         $resa = $_POST['resu'];
 
         //Estas metricas se evaluan
-        //$sta = "Nada";
-        //$recom = "Nada";
+        $sta = "Nada";
+        $recom = "Nada";
         $porce = ($resa * 100)/$met;
 //Clientes
 if($porce < 60)
 {
 	$sta = "Riesgo";
-	$recom ="Resuelve problemas con el cliente desde el primer momento y promocinate atraves de redes sociales"
+	$recom ="Resuelve problemas con el cliente desde el primer momento y promocinate atraves de redes sociales";
 }
 elseif ($porce<100)
 {
 	$sta ="Precaucion";
-	$recom = "Crea interés con las características distintivas de tu producto y/o servicio"
+	$recom = "Crea interés con las características distintivas de tu producto y/o servicio";
 }
 else ($porce >=100)
 {
