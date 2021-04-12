@@ -14,8 +14,8 @@
         $resa = $_POST['resu'];
 
         //Estas metricas se evaluan 
-        $sta = "Nada";
-        $recom = "Nada";
+        $sta = "Normal";
+        $recom = "Sigue asi";
       
         $binding=[
           ':obj'=>$obj,
