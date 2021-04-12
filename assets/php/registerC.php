@@ -4,6 +4,7 @@
   include('conexion.php');
   $db = new BD();
   $pdo = $db->connect();
+  $porce = 0;
   // objeto de respuesta a clientel
 
         $user_table = 'clientes';
