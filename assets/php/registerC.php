@@ -17,24 +17,7 @@
         //Estas metricas se evaluan
         $sta = "Nada";
         $recom = "Nada";
-        $porce = ($resa * 100)/$met;
-//Clientes
-if($porce < 60)
-{
-	$sta = "Riesgo";
-	$recom ="Resuelve problemas con el cliente desde el primer momento y promocinate atraves de redes sociales";
-}
-elseif ($porce<100)
-{
-	$sta ="Precaucion";
-	$recom = "Crea interés con las características distintivas de tu producto y/o servicio";
-}
-else ($porce >=100)
-{
-	$sta ="Exitoso";
-	$recom = "Sigue asi, tus estrategias fucionan adecuadamente";
-}
-
+        
         $binding=[
           ':obj'=>$obj,
           ':fm'=>$fm,
