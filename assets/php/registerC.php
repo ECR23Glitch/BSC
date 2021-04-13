@@ -14,10 +14,28 @@
         $met = $_POST['met'];
         $resa = $_POST['resu'];
 
-        //Estas metricas se evaluan 
+        //Estas metricas se evaluan
         $sta = "Normal";
         $recom = "Sigue asi";
-      
+        $porce = ($resa * 100)/$met;
+        //Clientes
+        if($porce <= 60)
+        {
+        	$sta = "Riesgo";
+        	$recom ="Resuelve problemas con el cliente desde el primer momento y promocinate através de redes sociales";
+        }
+
+        elseif ($porce >60)
+        {
+        	$sta ="Precaución";
+        	$recom = "Crea interés con las características distintivas de tu producto y/o servicio";
+        }
+        elseif ($porce >=100)
+        {
+        	$sta = "Exitoso";
+        	$recom = "Sigue asi, tus estrategias fucionan adecuadamente";
+        }
+
         $binding=[
           ':obj'=>$obj,
           ':fm'=>$fm,
