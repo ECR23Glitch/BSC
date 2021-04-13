@@ -25,7 +25,7 @@
         	$recom ="Resuelve problemas con el cliente desde el primer momento y promocinate através de redes sociales";
         }
 
-        elseif ($porce >60)
+        elseif ($porce >60 and $porce<100)
         {
         	$sta ="Precaución";
         	$recom = "Crea interés con las características distintivas de tu producto y/o servicio";

@@ -25,7 +25,7 @@
         	$recom ="Define los perfiles de competencias de tus empleados, identifica fortalezas y debilidades";
         }
 
-        elseif ($porce >60)
+        elseif ($porce >60 and $porce<100)
         {
         	$sta ="Precaución";
         	$recom = "Impulsa el coaching, para certificar a tus empleados";
