@@ -48,7 +48,7 @@ if(!isset($_SESSION['usuario']))
       <div class="container hero">
           <div class="row">
               <div class="col-md-8 offset-md-2">
-                  <h1 class="text-center">¿A que area quieres aplicar el SCB?</h1>
+                  <h1 class="text-center">¿A que area quieres aplicar el Balance ScoreCard?</h1>
               </div>
           </div>
       </div>
