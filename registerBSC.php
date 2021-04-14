@@ -31,7 +31,7 @@ if(!isset($_SESSION['usuario']))
   <header class="header-dark">
     <!--Menú-->
       <nav class="navbar navbar-dark navbar-expand-lg navigation-clean-search">
-          <div class="container"><a class="navbar-brand" href="profilelogged.php">BSC</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+          <div class="container"><a class="navbar-brand" href="profilelogged.php">Balance ScoreCard</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
               <div class="collapse navbar-collapse" id="navcol-1">
                   <ul class="navbar-nav">
                       <li class="nav-item"><a class="nav-link" href="#">Crea tu reporte</a></li>
