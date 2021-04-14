@@ -34,7 +34,7 @@ if(!isset($_SESSION['usuario']))
 <body>
     <header class="header-dark">
         <nav class="navbar navbar-dark navbar-expand-lg navigation-clean-search">
-            <div class="container"><a class="navbar-brand" href="profilelogged.php">BSC</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="container"><a class="navbar-brand" href="profilelogged.php">Balance ScoreCard</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="registerBSC.php">Crea tu reporte</a></li>
@@ -50,7 +50,7 @@ if(!isset($_SESSION['usuario']))
         <div class="container hero">
             <div class="row">
                 <div class="col-md-8 offset-md-2">
-                    <h1 class="text-center">Reportes BSC</h1>
+                    <h1 class="text-center">Reportes Balance ScoreCard</h1>
                 </div>
             </div>
         </div>
