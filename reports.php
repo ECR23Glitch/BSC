@@ -84,8 +84,12 @@ if(!isset($_SESSION['usuario']))
                     </ul>
                 </div>
                 <div class="col-md-6 item text">
-                    <h3>Nuestra identidad</h3>
-                    <p>The pastry chefs tatata</p>
+                    <h3>Acerca de Nosotros</h3>
+                    <p>Elias Camacho Ramírez</p>
+                    <p>Erendira Romano Fernández</p>
+                    <p>Maday Santiago García</p>
+                    <br>
+                    <p>Profe. José Bernardo Parra Victorino</p>
                 </div>
             </div>
             <p class="copyright" style="font-size: 18px;color: rgb(254,255,255);">The pastry Chefs © 2021</p>
