@@ -95,12 +95,16 @@ if(!isset($_SESSION['usuario']))
                 <div class="col-sm-12 col-md-6 col-lg-6 item">
                     <h3>Servicios</h3>
                     <ul>
-                        <li>Reporte BSC</li>
+                        <li>Reporte Balance ScoreCard</li>
                     </ul>
                 </div>
                 <div class="col-md-6 item text">
-                    <h3>Nuestra identidad</h3>
-                    <p>The pastry chefs tatata</p>
+                    <h3>Acerca de Nosotros</h3>
+                    <p>Elias Camacho Ramírez</p>
+                    <p>Erendira Romano Fernández</p>
+                    <p>Maday Santiago García</p>
+                    <br>
+                    <p>Profe. José Bernardo Parra Victorino</p>
                 </div>
             </div>
             <p class="copyright" style="color: rgb(251,251,251);text-align: center;font-size: 18px;">The pastry Chefs © 2021</p>
