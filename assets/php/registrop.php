@@ -19,22 +19,45 @@
         $recom = "Sigue asi";
         $porce = ($resa * 100)/$met;
         //Procesos
-        if($porce <= 60)
+        If($indi == 13 or $indi == 14 or $indi == 16)
         {
-        	$sta = "Riesgo";
-        	$recom ="Identifica las necesidades y requisitos del cliente";
+          if($porce <= 60)
+          {
+            $sta = "Exitoso";
+            $recom = "Sigue asi, tus estrategias fucionan adecuadamente";
+          }
+
+          elseif ($porce >60 and $porce<100)
+          {
+          	$sta ="Precaución";
+          	$recom = "Establece procesos rápidos y amigables con el usuario";
+          }
+          elseif ($porce >=100)
+          {
+            $sta = "Riesgo";
+            $recom ="Identifica las necesidades y automatiza el proceso";
+          }
+        }
+        else
+        {
+          if($porce <= 60)
+          {
+          	$sta = "Riesgo";
+          	$recom ="Identifica las necesidades y requisitos, asi mismo automatiza el proceso";
+          }
+
+          elseif ($porce >60 and $porce<100)
+          {
+          	$sta ="Precaución";
+          	$recom = "Establece procesos rápidos y amigables con el usuario";
+          }
+          elseif ($porce >=100)
+          {
+          	$sta = "Exitoso";
+          	$recom = "Sigue asi, tus estrategias fucionan adecuadamente";
+          }
         }
 
-        elseif ($porce >60 and $porce<100)
-        {
-        	$sta ="Precaución";
-        	$recom = "Establece procesos rápidos y amigables cde atención al cliente";
-        }
-        elseif ($porce >=100)
-        {
-        	$sta = "Exitoso";
-        	$recom = "Sigue asi, tus estrategias fucionan adecuadamente";
-        }
 
         $binding=[
           ':obj'=>$obj,
