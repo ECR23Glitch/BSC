@@ -1,0 +1,66 @@
+[26-Mar-2021 20:05:54 America/Mexico_City] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'samurai1_bsc.perspectiva' doesn't exist in /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php:50
+Stack trace:
+#0 /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php(50): PDO->prepare('SELECT obj,frec...')
+#1 /home3/samurai1/bsc.samuraistudio.com.mx/profilelogged.php(13): consultas->damelosreportes(2)
+#2 {main}
+  thrown in /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php on line 50
+[26-Mar-2021 20:06:06 America/Mexico_City] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'samurai1_bsc.perspectiva' doesn't exist in /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php:50
+Stack trace:
+#0 /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php(50): PDO->prepare('SELECT obj,frec...')
+#1 /home3/samurai1/bsc.samuraistudio.com.mx/profilelogged.php(13): consultas->damelosreportes(2)
+#2 {main}
+  thrown in /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php on line 50
+[26-Mar-2021 20:06:14 America/Mexico_City] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'samurai1_bsc.perspectiva' doesn't exist in /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php:50
+Stack trace:
+#0 /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php(50): PDO->prepare('SELECT obj,frec...')
+#1 /home3/samurai1/bsc.samuraistudio.com.mx/profilelogged.php(13): consultas->damelosreportes(2)
+#2 {main}
+  thrown in /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php on line 50
+[05-Apr-2021 00:35:29 America/Mexico_City] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'samurai1_bsc.perspectiva' doesn't exist in /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php:50
+Stack trace:
+#0 /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php(50): PDO->prepare('SELECT obj,frec...')
+#1 /home3/samurai1/bsc.samuraistudio.com.mx/profilelogged.php(13): consultas->damelosreportes(1)
+#2 {main}
+  thrown in /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php on line 50
+[05-Apr-2021 00:35:35 America/Mexico_City] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'samurai1_bsc.perspectiva' doesn't exist in /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php:50
+Stack trace:
+#0 /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php(50): PDO->prepare('SELECT obj,frec...')
+#1 /home3/samurai1/bsc.samuraistudio.com.mx/profilelogged.php(13): consultas->damelosreportes(1)
+#2 {main}
+  thrown in /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php on line 50
+[05-Apr-2021 00:35:41 America/Mexico_City] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'samurai1_bsc.perspectiva' doesn't exist in /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php:50
+Stack trace:
+#0 /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php(50): PDO->prepare('SELECT obj,frec...')
+#1 /home3/samurai1/bsc.samuraistudio.com.mx/profilelogged.php(13): consultas->damelosreportes(1)
+#2 {main}
+  thrown in /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php on line 50
+[05-Apr-2021 00:35:45 America/Mexico_City] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'samurai1_bsc.perspectiva' doesn't exist in /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php:50
+Stack trace:
+#0 /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php(50): PDO->prepare('SELECT obj,frec...')
+#1 /home3/samurai1/bsc.samuraistudio.com.mx/profilelogged.php(13): consultas->damelosreportes(1)
+#2 {main}
+  thrown in /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php on line 50
+[05-Apr-2021 00:35:47 America/Mexico_City] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'samurai1_bsc.perspectiva' doesn't exist in /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php:50
+Stack trace:
+#0 /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php(50): PDO->prepare('SELECT obj,frec...')
+#1 /home3/samurai1/bsc.samuraistudio.com.mx/profilelogged.php(13): consultas->damelosreportes(1)
+#2 {main}
+  thrown in /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php on line 50
+[05-Apr-2021 21:17:28 America/Mexico_City] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND id_ind=indicador.id' at line 1 in /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php:42
+Stack trace:
+#0 /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php(42): PDO->prepare('SELECT * FROM c...')
+#1 /home3/samurai1/bsc.samuraistudio.com.mx/vistarep.php(12): consultas->damelosreportes('clientes', NULL)
+#2 {main}
+  thrown in /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php on line 42
+[06-Apr-2021 21:43:53 America/Mexico_City] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php:50
+Stack trace:
+#0 /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php(50): PDO->prepare('SELECT count(*)...')
+#1 /home3/samurai1/bsc.samuraistudio.com.mx/profilelogged.php(13): consultas->cuantosReportesC(NULL)
+#2 {main}
+  thrown in /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php on line 50
+[13-Apr-2021 22:47:57 America/Mexico_City] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND id_ind=indicador.id' at line 1 in /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php:42
+Stack trace:
+#0 /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php(42): PDO->prepare('SELECT * FROM c...')
+#1 /home3/samurai1/bsc.samuraistudio.com.mx/vistarep.php(12): consultas->damelosreportes('clientes', NULL)
+#2 {main}
+  thrown in /home3/samurai1/bsc.samuraistudio.com.mx/assets/php/consultas.php on line 42
