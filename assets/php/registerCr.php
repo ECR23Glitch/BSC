@@ -19,22 +19,46 @@
         $recom = "Sigue asi";
         $porce = ($resa * 100)/$met;
         //Crecimiento
-        if($porce <= 60)
+        If ($indi == 19)
         {
-        	$sta = "Riesgo";
-        	$recom ="Define los perfiles de competencias de tus empleados, identifica fortalezas y debilidades";
+          if($porce <= 60)
+          {
+            $sta = "Exitoso";
+            $recom = "Sigue asi, tus estrategias fucionan adecuadamente";
+          }
+
+          elseif ($porce >60 and $porce<100)
+          {
+            $sta ="Precaución";
+            $recom = "Impulsa el coaching, para certificar a tus empleados";
+          }
+          elseif ($porce >=100)
+          {
+            $sta = "Riesgo";
+            $recom ="Define los perfiles de competencias de tus empleados, identifica fortalezas y debilidades";
+
+          }
+        }
+        else
+        {
+          if($porce <= 60)
+          {
+            $sta = "Riesgo";
+            $recom ="Define los perfiles de competencias de tus empleados, identifica fortalezas y debilidades";
+          }
+
+          elseif ($porce >60 and $porce<100)
+          {
+            $sta ="Precaución";
+            $recom = "Impulsa el coaching, para certificar a tus empleados";
+          }
+          elseif ($porce >=100)
+          {
+            $sta = "Exitoso";
+            $recom = "Sigue asi, tus estrategias fucionan adecuadamente";
+          }
         }
 
-        elseif ($porce >60 and $porce<100)
-        {
-        	$sta ="Precaución";
-        	$recom = "Impulsa el coaching, para certificar a tus empleados";
-        }
-        elseif ($porce >=100)
-        {
-        	$sta = "Exitoso";
-        	$recom = "Sigue asi, tus estrategias fucionan adecuadamente";
-        }
 
         $binding=[
           ':obj'=>$obj,
