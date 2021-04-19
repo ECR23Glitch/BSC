@@ -2,9 +2,12 @@
   session_start();
   $idUsuario = $_SESSION['usuario']['id'];
   include('conexion.php');
+  include('consultas.php');
   $db = new BD();
   $pdo = $db->connect();
   $porce = 0;
+  $class = new Consultas();
+  $comp = $class->damelosindicadoresconareas('clientes');
   // objeto de respuesta a clientel
 
         $user_table = 'clientes';
@@ -18,22 +21,44 @@
         $sta = "Normal";
         $recom = "Sigue asi";
         $porce = ($resa * 100)/$met;
-        //Clientes
-        if($porce <= 60)
+        if($indi == 10 or $indi == 11 )
         {
-        	$sta = "Riesgo";
-        	$recom ="Resuelve problemas con el cliente desde el primer momento y promocinate através de redes sociales";
-        }
+          if($porce <= 60)
+          {
+            $sta = "Exitoso";
+            $recom = "Sigue asi, tus estrategias fucionan adecuadamente";
+          }
 
-        elseif ($porce >60 and $porce<100)
-        {
-        	$sta ="Precaución";
-        	$recom = "Crea interés con las características distintivas de tu producto y/o servicio";
+          elseif ($porce >60 and $porce<100)
+          {
+            $sta ="Precaución";
+            $recom = "Crea interés con las características distintivas de tu producto y/o servicio";
+          }
+          elseif ($porce >=100)
+          {
+            $sta = "Riesgo";
+            $recom ="Resuelve problemas con el cliente desde el primer momento y promocinate através de redes sociales";
+          }
         }
-        elseif ($porce >=100)
+        else
         {
-        	$sta = "Exitoso";
-        	$recom = "Sigue asi, tus estrategias fucionan adecuadamente";
+          //Clientes
+          if($porce <= 60)
+          {
+          	$sta = "Riesgo";
+          	$recom ="Resuelve problemas con el cliente desde el primer momento y promocinate através de redes sociales";
+          }
+
+          elseif ($porce >60 and $porce<100)
+          {
+          	$sta ="Precaución";
+          	$recom = "Crea interés con las características distintivas de tu producto y/o servicio";
+          }
+          elseif ($porce >=100)
+          {
+          	$sta = "Exitoso";
+          	$recom = "Sigue asi, tus estrategias fucionan adecuadamente";
+          }
         }
 
         $binding=[
