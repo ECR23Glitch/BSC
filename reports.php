@@ -54,11 +54,17 @@ if(!isset($_SESSION['usuario']))
                     <h1 class="text-center">Escoge una area para poder ver tus resultados</h1>
                     <div class="row people" style="background: var(--gray-dark);">
                       <!--Datos personales del usuario-->
-                        <div class="col-md-12 col-lg-12 item">
-                    <a class="btn btn-light action-button" role="button" href="vistarep.php?are=clientes" style="width: :250px">CLIENTES</a>
-                    <a class="btn btn-light action-button" role="button" href="vistarep.php?are=finanzas" style="width: :250px">FINANZAS</a>
-                    <a class="btn btn-light action-button" role="button" href="vistarep.php?are=crecimiento" style="width: :250px">CRECIMIENTO</a>
-                    <a class="btn btn-light action-button" role="button" href="vistarep.php?are=procesos" style="width: :250px">PROCESOS</a>
+                        <div class="col-md-3">
+                            <a class="btn btn-light action-button" role="button" href="vistarep.php?are=clientes" style="width: :250px">CLIENTES</a>
+                        </div>
+                        <div class="col-md-3">
+                            <a class="btn btn-light action-button" role="button" href="vistarep.php?are=finanzas" style="width: :250px">FINANZAS</a>
+                        </div>
+                        <div class="col-md-3">
+                            <a class="btn btn-light action-button" role="button" href="vistarep.php?are=crecimiento" style="width: :250px">CRECIMIENTO</a>
+                        </div>
+                        <div class="col-md-3">
+                            <a class="btn btn-light action-button" role="button" href="vistarep.php?are=procesos" style="width: :250px">PROCESOS</a>
                         </div>
                     </div>
                 </div>
