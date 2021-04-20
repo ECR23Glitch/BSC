@@ -82,7 +82,7 @@ if(!isset($_SESSION['usuario']))
                                         <div data-bss-hover-animate="wobble" class="box" style="text-align: center;background: var(--gray);">
                                             <h3 class="name" style="color: var(--white);">Tus reportes</h3>
                                             <p class="title" style="color: rgb(0,0,0);">Muestra tus reportes mas recientes</p>
-                                            <p class="description" style="color: rgb(255,255,255);">Reportes hechos</p>
+                                            <h2 class="description" style="color: rgb(255,255,255);">Reportes hechos</h2>
                                             <?php
                                                 foreach ($repC as $rc) {
                                             ?>
