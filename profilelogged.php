@@ -22,7 +22,7 @@ if(!isset($_SESSION['usuario']))
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>bsc</title>
+    <title>Balance ScoreCard</title>
     <!--Librerias-->
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
@@ -123,12 +123,13 @@ if(!isset($_SESSION['usuario']))
                     </ul>
                 </div>
                 <div class="col-md-6 item text">
-                    <h3>Acerca de Nosotros</h3>
+                    <h3>Nosotros somos</h3>
                     <p>Elias Camacho Ramírez</p>
                     <p>Erendira Romano Fernández</p>
                     <p>Maday Santiago García</p>
                     <br>
-                    <p>Profe. José Bernardo Parra Victorino</p>
+                    <p>Asesor</p>
+                    <p>Profe. Bernardo Parra Victorino</p>
                 </div>
             </div>
             <p class="copyright" style="font-size: 18px;color: rgb(255,255,255);">The pastry Chefs © 2021</p>
