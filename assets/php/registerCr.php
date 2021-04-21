@@ -30,7 +30,7 @@
           elseif ($porce >60 and $porce<100)
           {
             $sta ="Precaución";
-            $recom = "Impulsa el coaching, para certificar a tus empleados";
+            $recom = "Impulsa el coaching a través de cursos y/o capacitaciones,  para certificar a tus empleados";
           }
           elseif ($porce >=100)
           {
@@ -50,7 +50,7 @@
           elseif ($porce >60 and $porce<100)
           {
             $sta ="Precaución";
-            $recom = "Impulsa el coaching, para certificar a tus empleados";
+            $recom = "Impulsa el coaching a través de cursos y/o capacitaciones, para certificar a tus empleados";
           }
           elseif ($porce >=100)
           {

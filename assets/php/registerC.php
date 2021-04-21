@@ -32,7 +32,7 @@
           elseif ($porce >60 and $porce<100)
           {
             $sta ="Precaución";
-            $recom = "Crea interés con las características distintivas de tu producto y/o servicio";
+            $recom = "Crea interés (promociones, descuentos) con las características distintivas de tu producto y/o servicio";
           }
           elseif ($porce >=100)
           {
@@ -52,7 +52,7 @@
           elseif ($porce >60 and $porce<100)
           {
           	$sta ="Precaución";
-          	$recom = "Crea interés con las características distintivas de tu producto y/o servicio";
+          	$recom = "Crea interés (promociones, descuentos) con las características distintivas de tu producto y/o servicio";
           }
           elseif ($porce >=100)
           {

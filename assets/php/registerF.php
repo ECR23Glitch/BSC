@@ -22,7 +22,7 @@
         if($porce <= 60)
         {
         	$sta = "Riesgo";
-        	$recom ="Fideliza clientes";
+        	$recom ="Fideliza clientes (tarjetas de lealtad, beneficios, descuentos)";
         }
 
         elseif ($porce >60 and $porce<100)
