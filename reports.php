@@ -51,7 +51,7 @@ if(!isset($_SESSION['usuario']))
               <!--Título-->
                 <div class="col-md-8 offset-md-2">
                     <h1 class="text-center">Acá están tus reportes hechos</h1>
-                    <h1 class="text-center">Escoge una area para poder ver tus resultados</h1>
+                    <h1 class="text-center">Escoge un área para poder ver tus resultados</h1>
                     <div class="row people" style="background: var(--gray-dark);">
                       <!--Datos personales del usuario-->
                         <div class="col-md-3">
@@ -86,7 +86,7 @@ if(!isset($_SESSION['usuario']))
                 <div class="col-sm-12 col-md-6 col-lg-6 item">
                     <h3>Servicios</h3>
                     <ul>
-                        <li>Reporte Balance ScoreCard</li>
+                        <i>Reporte Balance ScoreCard</i>
                     </ul>
                 </div>
                 <div class="col-md-6 item text">

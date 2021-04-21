@@ -14,7 +14,7 @@ if(!isset($_SESSION['usuario']))
   $repCr = $consultas->cuantosReportesCr($idUsuario);
   $repF = $consultas->cuantosReportesF($idUsuario);
   $repP = $consultas->cuantosReportesP($idUsuario);
- 
+
  ?>
 
 <html lang="en">
@@ -57,7 +57,7 @@ if(!isset($_SESSION['usuario']))
         <div class="container hero">
             <div class="row">
                 <div class="col-md-8 offset-md-2">
-                    <h1 class="text-center">Acá esta tu perfil</h1>
+                    <h1 class="text-center">Acá está tu perfil</h1>
                 </div>
             </div>
         </div>
@@ -81,7 +81,7 @@ if(!isset($_SESSION['usuario']))
                                     <div class="col-md-6 col-lg-6 item">
                                         <div data-bss-hover-animate="wobble" class="box" style="text-align: center;background: var(--gray);">
                                             <h3 class="name" style="color: var(--white);">Tus reportes</h3>
-                                            <p class="title" style="color: rgb(0,0,0);">Muestra tus reportes mas recientes</p>
+                                            <p class="title" style="color: rgb(0,0,0);">Muestra tus reportes más recientes</p>
                                             <h2 class="description" style="color: rgb(255,255,255);">Reportes hechos</h2>
                                             <?php
                                                 foreach ($repC as $rc) {
@@ -119,7 +119,7 @@ if(!isset($_SESSION['usuario']))
                 <div class="col-sm-12 col-md-6 col-lg-6 item" style="text-align: center;">
                     <h3>Servicios</h3>
                     <ul>
-                        <li>Reporte Balance ScoreCard</li>
+                        <i>Reporte Balance ScoreCard</i>
                     </ul>
                 </div>
                 <div class="col-md-6 item text">

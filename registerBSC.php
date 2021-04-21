@@ -48,7 +48,7 @@ if(!isset($_SESSION['usuario']))
       <div class="container hero">
           <div class="row">
               <div class="col-md-8 offset-md-2">
-                  <h1 class="text-center">¿A que area quieres aplicar el Balance ScoreCard?</h1>
+                  <h1 class="text-center">¿A qué área quieres aplicar el <i>Balance ScoreCard?<i></h1>
               </div>
           </div>
       </div>
@@ -61,11 +61,11 @@ if(!isset($_SESSION['usuario']))
                               <div class="row people" style="background: var(--gray-dark);">
                                 <!--Datos personales del usuario-->
                                   <div class="col-md-12 col-lg-12 item">
-                                          <h3 class="name" style="color: var(--white);"> Escoge el area</h3>
-                                          <a class="btn btn-primary text-dark bg-white border rounded" role="button" data-bss-hover-animate="rubberBand" style="width: 250px;" href="registerClientes.php">Clientes</a>
-                                          <a class="btn btn-primary text-dark bg-white border rounded" role="button" data-bss-hover-animate="rubberBand" style="width: 250px;" href="registerCrecimiento.php">Crecimiento</a>
-                                          <a class="btn btn-primary text-dark bg-white border rounded" role="button" data-bss-hover-animate="rubberBand" style="width: 250px;" href="registerFinanzas.php">Finanzas</a>
-                                          <a class="btn btn-primary text-dark bg-white border rounded" role="button" data-bss-hover-animate="rubberBand" style="width: 250px;" href="registerProcesos.php">Procesos</a>
+                                          <h3 class="name" style="color: var(--white);"> Escoge el área</h3>
+                                          <a class="btn btn-primary text-dark bg-white border rounded" role="button" data-bss-hover-animate="rubberBand" style="width: 250px;" href="registerClientes.php">CLIENTES</a>
+                                          <a class="btn btn-primary text-dark bg-white border rounded" role="button" data-bss-hover-animate="rubberBand" style="width: 250px;" href="registerCrecimiento.php">CRECIMIENTO</a>
+                                          <a class="btn btn-primary text-dark bg-white border rounded" role="button" data-bss-hover-animate="rubberBand" style="width: 250px;" href="registerFinanzas.php">FINANZAS</a>
+                                          <a class="btn btn-primary text-dark bg-white border rounded" role="button" data-bss-hover-animate="rubberBand" style="width: 250px;" href="registerProcesos.php">PROCESOS</a>
                                   </div>
                               </div>
                           </div>
