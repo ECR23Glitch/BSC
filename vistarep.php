@@ -18,7 +18,7 @@ if(!isset($_SESSION['usuario']))
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>BSC</title>
+    <title>Balance ScoreCard</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
@@ -34,7 +34,7 @@ if(!isset($_SESSION['usuario']))
 <body>
     <header class="header-dark">
         <nav class="navbar navbar-dark navbar-expand-lg navigation-clean-search">
-            <div class="container"><a class="navbar-brand" href="profilelogged.php">Balance ScoreCard</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="container"><a class="navbar-brand" href="profilelogged.php"><i>Balance ScoreCard</i></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="registerBSC.php">Crea tu reporte</a></li>
@@ -50,7 +50,7 @@ if(!isset($_SESSION['usuario']))
         <div class="container hero">
             <div class="row">
                 <div class="col-md-8 offset-md-2">
-                    <h1 class="text-center">Reportes Balance ScoreCard</h1>
+                  <h1 class="text-center">Reportes <i>Balance ScoreCard</i></h1>
                 </div>
             </div>
         </div>
@@ -95,7 +95,7 @@ if(!isset($_SESSION['usuario']))
                 <div class="col-sm-12 col-md-6 col-lg-6 item">
                     <h3>Servicios</h3>
                     <ul>
-                        <li>Reporte Balance ScoreCard</li>
+                      <li>Reporte <i>Balance ScoreCard</i></li>
                     </ul>
                 </div>
                 <div class="col-md-6 item text">
