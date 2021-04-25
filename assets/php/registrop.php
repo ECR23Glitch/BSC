@@ -13,13 +13,14 @@
         $indi = $_POST['ind'];
         $met = $_POST['met'];
         $resa = $_POST['resu'];
-
+        $tes = $_POST['te'];
+        $det = $_POST['dt'];
         //Estas metricas se evaluan
         $sta = "Normal";
         $recom = "Sigue asi";
         $porce = ($resa * 100)/$met;
         //Procesos
-        If($indi == 13 or $indi == 14 or $indi == 16)
+        if($indi == 13 or $indi == 14 or $indi == 16)
         {
           if($porce <= 60)
           {
@@ -67,12 +68,14 @@
           ':resa'=>$resa,
           ':idus'=>$idUsuario,
           ':sta'=>$sta,
-          ':recom'=>$recom
+          ':recom'=>$recom,
+          ':te' => $tes,
+          ':det' => $det
         ];
 
         $query = "INSERT INTO $user_table
-        (obj, meta, id_ind, frec_med, resu_act, sta, recom, cliid)
-        VALUES(:obj, :met, :ind, :fm, :resa, :sta, :recom, :idus)";
+        (TipEstrategia, DescEstrategia, obj, meta, id_ind, frec_med, resu_act, sta, recom, cliid)
+        VALUES(:te,:det,:obj, :met, :ind, :fm, :resa, :sta, :recom, :idus)";
 
         $stmt = $pdo->prepare($query);
         if($stmt->execute($binding)){

@@ -37,6 +37,19 @@ if(!isset($_SESSION['usuario']))
                 <input class="form-control" type="text" name="obj" placeholder="Objetivo" maxlength="45">
               </div>
               <div class="form-group">
+                <select class="form-control" id="te" name="te">
+                  <optgroup class="form-group" style="color:black;" label="Tipo de estrategia a usar">
+                    <option value="Estrategias funcionales" style="color:black;">Estrategias funcionales</option>
+                    <option value="Estrategias operacionales" style="color:black;">Estrategias operacionales</option>
+                    <option value="Estrategias organizacionales" style="color:black;">Estrategias organizacionales</option>
+                    <option value="Estrategias publicitarias" style="color:black;">Estrategias publicitarias</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" label="Descripción de su estrategia" id="dt" name="dt" placeholder="Descripción de su estrategia" maxlength=100></textarea>
+              </div>
+              <div class="form-group">
                 <select class="form-control" id="fm" name="fm">
                   <optgroup class="form-group" style="color:black;" label="Frecuencia de medida">
                     <option value="Anual" style="color:black;">Anual</option>

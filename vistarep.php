@@ -65,6 +65,8 @@ if(!isset($_SESSION['usuario']))
                                     <div class="col-md-6 col-lg-6 item">
                                         <div data-bss-hover-animate="wobble" class="box" style="background: var(--gray);">
                                             <h3 class="name" style="color: var(--white);">Fecha de creación:&nbsp;<?php echo $rh['created_at']; ?></h3>
+                                            <h3 class="name" style="color: var(--white);">Tipo de estrategia:&nbsp;<?php echo $rh['TipEstrategia']; ?></h3>
+                                            <p class="title" style="color: rgb(0,0,0);">Descripción estrategia:&nbsp;<?php echo $rh['DescEstrategia']; ?></p>
                                             <h3 class="name" style="color: var(--white);">Objetivo:&nbsp;<?php echo $rh['obj']; ?></h3>
                                             <p class="title" style="color: rgb(0,0,0);">Indicador medido:&nbsp;<?php echo $rh['nombre']; ?></p>
                                             <p class="description" style="color: var(--white);">Frecuencia medida:&nbsp;<?php echo $rh['frec_med']; ?></p>
